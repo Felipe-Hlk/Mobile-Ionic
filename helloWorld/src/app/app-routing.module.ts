@@ -10,7 +10,31 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'carvao',
+    loadChildren: () => import('./carvao/carvao.module').then( m => m.CarvaoPageModule)
   },
+  {
+    path: 'carros',
+    loadChildren: () => import('./carros/carros.module').then( m => m.CarrosPageModule)
+  },
+  {
+    path: 'caminhoes',
+    loadChildren: () => import('./caminhoes/caminhoes.module').then( m => m.CaminhoesPageModule)
+  },
+  {
+    path: 'barcos',
+    loadChildren: () => import('./barcos/barcos.module').then( m => m.BarcosPageModule)
+  },
+  {
+    path: 'avioes',
+    loadChildren: () => import('./avioes/avioes.module').then( m => m.AvioesPageModule)
+  },
+  {
+    path: 'promocoes',
+    loadChildren: () => import('./promocoes/promocoes.module').then( m => m.PromocoesPageModule)
+  },
+
 ];
 
 @NgModule({

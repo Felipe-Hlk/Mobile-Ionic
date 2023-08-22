@@ -5,11 +5,45 @@ import { Injectable } from '@angular/core';
 })
 export class BdtempService {
 
-  private bd: any[] = [];
+  private bd: any = [];
 
   constructor() { }
 
   salvar(chave: string, valor: any ){
-    
+    if (chave.trim()){
+      this.bd[chave] = valor;
+      return true;
+    }
+    return false;
   }
+
+  buscar(chave: string) {
+    if (chave.trim()) {
+      return this.bd[chave];
+    }
+    return null;
+  }
+
+  deletar(chave: string) {
+    if (chave.trim()) {
+      return this.bd[chave];
+    }
+    return null;
+  }
+
+  addProdutoCarrinho(produto:any){
+     if (!this.bd['carrinho']){
+      this.bd['carrinho'] = [];
+     }
+
+     if (produto) {
+      this.bd['carrinho'].push(produto);
+     }
+  }
+
+  removeProdutoCarrinho(posicao: number) {
+    this.bd['carrinho'].splice(posicao, 1);    
+  }
+
+  
 }

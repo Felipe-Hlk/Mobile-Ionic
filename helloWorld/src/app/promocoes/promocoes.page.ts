@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { BdtempService } from '../services/bdtemp.service';
 
 @Component({
   selector: 'app-promocoes',
   templateUrl: './promocoes.page.html',
   styleUrls: ['./promocoes.page.scss'],
 })
-export class PromocoesPage implements OnInit {
+export class PromocoesPage {
 
-  constructor() { }
+  constructor(public bdtemp: BdtempService) { }
 
-  ngOnInit() {
+  addProdutoCarrinho(produto:any){
+    this.bdtemp.addProdutoCarrinho(produto);
   }
 
+ 
 }

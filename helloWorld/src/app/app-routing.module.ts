@@ -10,10 +10,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
-    path: 'carvao',
-    loadChildren: () => import('./carvao/carvao.module').then( m => m.CarvaoPageModule)
   },
+  
   {
     path: 'carros',
     loadChildren: () => import('./carros/carros.module').then( m => m.CarrosPageModule)

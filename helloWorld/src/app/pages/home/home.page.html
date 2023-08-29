@@ -6,7 +6,6 @@
 
 <ion-content>
   <ion-card *ngFor="let produto of produtos">
-    <img [src]="produto.imagem" alt="Imagem do produto" />
     <ion-card-header>
       <ion-card-subtitle>{{ produto.categoria }}</ion-card-subtitle>
       <ion-card-title>{{ produto.nome }}</ion-card-title>

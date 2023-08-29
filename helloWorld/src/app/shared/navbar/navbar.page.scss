@@ -1,0 +1,14 @@
+
+
+/* Estilos para o cabeçalho */
+ion-header {
+  ion-toolbar {
+    --background: #333; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto no cabeçalho */
+  }
+
+  ion-title {
+    font-size: 20px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Peso da fonte do título */
+  }
+}

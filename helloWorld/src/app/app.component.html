@@ -1,1 +1,32 @@
 <app-navbar></app-navbar>
+<ion-content class="example-spacer">
+  <ion-menu
+    #menu
+    class="toolbar-menu"
+    side="start"
+    menuId="first"
+    contentId="main"
+    >
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle *ngFor="let item of items_menu">
+          <ion-item [routerLink]="item.link" routerLinkActive="active">
+            <!-- <ion-icon [name]="item.icon" slot="start"></ion-icon> -->
+            <ion-label>{{ item.label }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ menuName }}</ion-title>
+  </ion-toolbar>
+
+  <ion-content id="main">
+    <router-outlet  ></router-outlet>
+  </ion-content>
+</ion-content>

@@ -1,0 +1,54 @@
+ion-app {
+  ion-router-outlet#main {
+    margin-left: 0;
+    transition: margin-left 300ms ease-in-out;
+
+    &.menu-open {
+      margin-left: 280px;
+    }
+  }
+  
+}
+
+ion-content.example-spacer {
+  --ion-background-color: #f4f4f4;
+
+}
+
+
+ion-menu.toolbar-menu {
+
+  --ion-background-color: #333;
+  --ion-color: #fff;
+  width: 150px;
+
+}
+
+ion-list {
+  ion-item {
+    ion-label {
+      color: #fff;
+    }
+
+    ion-icon {
+      color: #fff;
+    }
+  }
+}
+
+
+ion-toolbar {
+  --ion-background-color: #fff;
+  --ion-color: #fff;
+}
+
+
+ion-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+ion-content#main {
+  --ion-background-color: #fff;
+}

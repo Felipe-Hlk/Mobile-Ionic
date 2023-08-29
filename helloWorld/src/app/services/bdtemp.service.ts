@@ -9,41 +9,62 @@ export class BdtempService {
 
   constructor() { }
 
-  salvar(chave: string, valor: any ){
-    if (chave.trim()){
+  salvar(chave: string, valor: any){
+    if(chave.trim()){
       this.bd[chave] = valor;
       return true;
     }
     return false;
   }
 
-  buscar(chave: string) {
-    if (chave.trim()) {
+  buscar(chave: string){
+    if(chave.trim()){
       return this.bd[chave];
     }
     return null;
   }
 
-  deletar(chave: string) {
-    if (chave.trim()) {
-      return this.bd[chave];
+  deletar(chave: string){
+    if(chave.trim()){
+      delete this.bd[chave];
+      return true;
     }
     return null;
   }
 
   addProdutoCarrinho(produto:any){
-     if (!this.bd['carrinho']){
-      this.bd['carrinho'] = [];
-     }
+    // Verifica se ja existe um carrinho
+    if(!this.bd['carrinho']){// Se Não (!)
+      this.bd['carrinho'] = []; // Cria um carrinho vazio
+    }
+    if(produto){ // Verifica se produto é um var válida
+      this.bd['carrinho'].push(produto); // Add no final do array
+    }
 
-     if (produto) {
-      this.bd['carrinho'].push(produto);
-     }
+    this.totalCarrinho();
   }
 
-  removeProdutoCarrinho(posicao: number) {
+  removeProdutoCarrinho(posicao: number){
     this.bd['carrinho'].splice(posicao, 1);
+    this.totalCarrinho();
   }
 
+  limparCarrinho(){
+    this.bd['carrinho'] = [];
+    this.totalCarrinho();
+  }
 
+  totalCarrinho(){
+    let total = 0;
+    // Verifica se o carrinho não está vazio
+    if(this.bd['carrinho'].length > 0){
+      // Percorre a lista de produtos para a soma
+      for(let prod of this.bd['carrinho']){
+        total = total + prod.valor;
+      }
+    }
+
+    this.salvar('qtdeItensCarrinho',this.bd['carrinho'].length);
+    this.salvar('totalCarrinho', total);
+  }
 }

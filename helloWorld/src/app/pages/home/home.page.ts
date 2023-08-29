@@ -38,24 +38,6 @@ export class HomePage {
       descricao: 'Descrição do Produto 2.',
 
     },
-    {
-      nome: 'Produto 6',
-      categoria: 'Eletrodoméstico',
-      descricao: 'Descrição do Produto 2.',
-
-    },
-    {
-      nome: 'Produto 7',
-      categoria: 'Eletrodoméstico',
-      descricao: 'Descrição do Produto 2.',
-
-    },
-    {
-      nome: 'Produto 7',
-      categoria: 'Eletrodoméstico',
-      descricao: 'Descrição do Produto 2.',
-
-    },
     
   ];
 

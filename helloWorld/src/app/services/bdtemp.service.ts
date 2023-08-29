@@ -42,8 +42,8 @@ export class BdtempService {
   }
 
   removeProdutoCarrinho(posicao: number) {
-    this.bd['carrinho'].splice(posicao, 1);    
+    this.bd['carrinho'].splice(posicao, 1);
   }
 
-  
+
 }

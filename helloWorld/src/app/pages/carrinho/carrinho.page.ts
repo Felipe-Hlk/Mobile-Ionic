@@ -11,20 +11,30 @@ export class CarrinhoPage {
   total = 0;
 
   listaProdutos = [
-    {nome: "JBL - Sound Bar",
-    descricao: "Experiência sonora incomparável...",
-    preco: 1490,
-    foto:"../../assets/img/JBLBar SoundBox.png"},
-
-    {nome:"Alexa - Echo Dot Com Relógio",
-    descricao:"Tempo, música e muito mais...",
-    preco:1233,
-    foto: "../../assets/img/echo-dot-com-relogio-4a-geracao-smart-speaker-com-relogio-e-alexa_1_1200.png"},
-
-    {name:"Joystick Xbox Series S",
-    descricao:"Controle Ultra leve e Ergonomico",
-    preco:380,
-    foto:"../../assets/img/Xbox-Series-X-1-TB-8K-HDR-2.png"},
+    {
+      nome:"Produto 1",
+      descricao:"Descrição Produto 1",
+      valor:120,
+      foto:'https://brilux.com.br/wp-content/uploads/2022/10/produtos-747x500.png'
+    },
+    {
+      nome:"Produto 4",
+      descricao:"Descrição Produto 4",
+      valor:200,
+      foto:'https://capricho.abril.com.br/wp-content/uploads/2023/07/promocoes-esquenta-prime-day-amazon.jpg?quality=85&strip=info&w=1000&h=666&crop=1'
+    },
+    {
+      nome:"Produto 7",
+      descricao:"Descrição Produto 7",
+      valor:500,
+      foto:'https://blog.ingredientesonline.com.br/wp-content/uploads/2020/07/produtos-naturais-goiania_capa-e1590413053661-1-1-750x482.jpg'
+    },
+    {
+      nome:"Produto 5",
+      descricao:"Descrição Produto 5",
+      valor:270,
+      foto:'https://www.assai.com.br/sites/default/files/produtos-perdigao-assai-atacadista.jpg'
+    },
   ];
 
   constructor(private bdtempService: BdtempService) {}
@@ -74,33 +84,7 @@ export class CarrinhoPage {
     } else {
       console.log('Não é possível concluir a compra, carrinho vazio.');
     }
-  
+
 }
 
-  /*ionViewWillEnter() {
-    // Obtenha os itens do carrinho e o qtdeItensCarrinho do serviço ao entrar na página
-    this.listaProdutos = this.bdtempService.buscar('carrinho') || [];
-    this.qtdeItensCarrinho = this.bdtempService.buscar('qtdeItensCarrinho') || 0;
-  }
-
-    addProdutoCarrinho(produto: any){
-    this.bdtempService.addProdutoCarrinho(produto); // Use the injected service
-    this.buscarDadosCarrinho();
-  }
-
-  buscarDadosCarrinho(){
-    this.qtdeItensCarrinho = this.bdtempService.buscar('qtdeItensCarrinho');
-  }
-
-  removerItem(index: number) {
-    this.bdtempService.removeProdutoCarrinho(index);
-    this.listaProdutos = this.bdtempService.buscar('carrinho') || [];
-    this.qtdeItensCarrinho = this.bdtempService.buscar('qtdeItensCarrinho') || 0;
-  }
-
-  limparCarrinho() {
-    this.bdtempService.limparCarrinho();
-    this.listaProdutos = [];
-    this.qtdeItensCarrinho = 0;
-  }*/
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="roxoclaro">
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-back-button color="roxolilas">Button</ion-back-button>
     </ion-buttons>
@@ -9,30 +9,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-color-roxoclaro-background">
+<ion-content [fullscreen]="true">
 
   <ion-list *ngIf="listaProdutos.length > 0; else emptyState">
     <ion-card color="roxoclaro" *ngFor="let produto of listaProdutos; let i = index">
       <ion-item>
-  
-        <ion-thumbnail slot="start">
-          <img [src]="produto.foto" alt="Imagem do Produto">
-        </ion-thumbnail>
-  
+
         <ion-label color="roxolilas">
           <h2>{{ produto.nome }}</h2>
           <p>{{ produto.descricao }}</p>
-          <p>Preço: R$ {{ produto.preco | number: '1.2-2' }}</p>
-          <ion-button color="warning" (click)="removerItem(i)">Remover</ion-button>
+          <p>Preço: R$ {{ produto.valor | number: '1.2' }}</p>
+          <ion-button color="dark" (click)="removerItem(i)">Remover</ion-button>
         </ion-label>
       </ion-item>
     </ion-card>
   </ion-list>
-  
+
   <ng-template #emptyState>
     <p>A lista de produtos está vazia.</p>
   </ng-template>
-  
+
 
   <ng-template #emptyState>
     <ion-text color="danger" class="ion-text-center">

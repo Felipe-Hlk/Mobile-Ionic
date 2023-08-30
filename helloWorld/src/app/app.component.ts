@@ -6,6 +6,8 @@ interface MenuItem {
   label: string;
 }
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',

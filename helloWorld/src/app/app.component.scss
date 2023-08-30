@@ -1,5 +1,5 @@
 ion-app {
-  
+
   ion-router-outlet#main {
     margin-left: 0;
     transition: margin-left 300ms ease-in-out;
@@ -7,16 +7,16 @@ ion-app {
     &.menu-open {
       margin-left: 280px;
 
-      
+
     }
   }
-  
+
 }
 
 ion-content.example-spacer {
   position: fixed;
   --ion-background-color: #f4f4f4;
-  
+
 
 }
 
@@ -25,8 +25,8 @@ ion-menu.toolbar-menu {
 
   --ion-background-color: #333;
   --ion-color: #fff;
-  width: 150px;
-  
+  width: 250px;
+
 
 }
 
@@ -52,11 +52,11 @@ ion-toolbar {
 ion-title {
   font-size: 20px;
   font-weight: bold;
-  
+
 }
 
 
 ion-content#main {
   --ion-background-color: #fff;
-  
+
 }

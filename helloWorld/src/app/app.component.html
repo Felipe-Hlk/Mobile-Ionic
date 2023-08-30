@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+
 <ion-content class="example-spacer">
   <ion-menu
     #menu
@@ -11,7 +11,7 @@
       <ion-list>
         <ion-menu-toggle *ngFor="let item of items_menu">
           <ion-item [routerLink]="item.link" routerLinkActive="active">
-            <!-- <ion-icon [name]="item.icon" slot="start"></ion-icon> -->
+
             <ion-label>{{ item.label }}</ion-label>
           </ion-item>
         </ion-menu-toggle>
